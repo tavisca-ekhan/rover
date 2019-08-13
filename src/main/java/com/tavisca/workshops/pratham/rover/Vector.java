@@ -1,36 +1,54 @@
 package com.tavisca.workshops.pratham.rover;
 
+import java.util.HashMap;
+
 public class Vector {
-        private final int x;
-        private final int y;
-        private final char direction;
+        public final int x;
+        public final int y;
+        public final char direction;
 
         public Vector(int x, int y, char direction) {
             this.x = x;
             this.y = y;
+
             this.direction = direction;
         }
 
-        public int x() {
-            return x;
-        }
+    private static HashMap<Character, Character> leftMap
+            = new HashMap<>() {{
+        put('N', 'W');
+        put('W', 'S');
+        put('S', 'E');
+        put('E', 'N');
+    }};
 
-        public int y() {
-            return y;
-        }
+    private static HashMap<Character, Character> rightMap
+            = new HashMap<>() {{
+        put('N', 'E');
+        put('W', 'N');
+        put('S', 'W');
+        put('E', 'S');
+    }};
 
-        public char direction() {
-            return direction;
-        }
+    public Vector turnLeft() {
+        return new Vector(this.x, this.y, leftMap.get(this.direction));
+    }
 
-        public Vector turnLeft() {
-            char dir = '\0';
-            switch (direction) {
-                case 'N': dir = 'W'; break;
-                case 'W': dir = 'S'; break;
-                case 'S': dir = 'E'; break;
-                case 'E': dir = 'N'; break;
-            }
-            return new Vector(x, y, dir);
-        }
+
+    public Vector turnRight() {
+        return new Vector(this.x, this.y, rightMap.get(this.direction));
+    }
+
+    public Vector move() {
+        if (direction == 'N')
+            return new Vector(this.x, this.y + 1, this.direction);
+        else if (direction == 'E')
+            return new Vector(this.x + 1, this.y, this.direction);
+        else if (direction == 'W')
+            return new Vector(this.x - 1, this.y, this.direction);
+        else if (direction == 'S')
+            return new Vector(this.x, this.y - 1,this.direction);
+
+        return new Vector(this.x, this.y, this.direction);
+    }
 }

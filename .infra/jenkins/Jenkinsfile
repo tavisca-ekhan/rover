@@ -1,4 +1,5 @@
 pipeline {
+    agent any
     stages {
         stage('Running the Rover Application using JDK_10') {
             steps {

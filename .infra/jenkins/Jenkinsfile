@@ -4,8 +4,8 @@ pipeline {
         stage('Running the Rover Application using JDK_10') {
             steps {
                sh script: '''
-                chmod +x gradlew
-                .gradlew build
+                chmod 777 ./gradlew
+                ./gradlew build
                 ''',
                 label: "Building Project"
             }

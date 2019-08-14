@@ -5,7 +5,7 @@ pipeline {
             steps {
                sh script: '''
                 chmod 777 ./gradlew
-                ./gradlew build -x test
+                ./gradlew build
                 ''',
                 label: "Building Project"
             }

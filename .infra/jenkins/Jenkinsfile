@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Running the Rover Application using JDK_10') {
+        stage('Building The Project') {
             steps {
                sh script: '''
                 chmod 777 ./gradlew
@@ -16,6 +16,16 @@ pipeline {
                     ./gradlew test
                 ''',
                 label: "Building Project"
+            }
+        }
+        stage('Static Code Analysis') {
+            steps {
+                echo 'Using sonarQube to do static code analysis'
+            }
+        }
+        stage('Deploying') {
+            steps {
+                echo 'Publishing to docker hub'
             }
         }
     }

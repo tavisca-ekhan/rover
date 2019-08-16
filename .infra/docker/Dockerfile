@@ -1,1 +1,2 @@
-#TODO
+FROM java:8
+

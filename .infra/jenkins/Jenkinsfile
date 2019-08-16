@@ -26,8 +26,17 @@ pipeline {
         stage('Deploying') {
             steps {
                 sh script: '''
+                    echo 'Building the docker image with Dockerfile'
                     docker build -t "rover" -f .infra/docker/Dockerfile .
                 '''
+            }
+        }
+        stage('Publishing to dockerhub') {
+            steps {
+                echo "Pushing the image to docker hub"
+                sh "docker login -u ebrank97 -p abc123!@#"
+                sh "docker tag rover:latest ebrank97/rover:latest"
+                sh "docker push ebrank97/rover:latest"
             }
         }
     }

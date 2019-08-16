@@ -25,7 +25,9 @@ pipeline {
         }
         stage('Deploying') {
             steps {
-                echo 'Publishing to docker hub'
+                sh script: '''
+                    docker build -t 'rover' -f .infra/docker/Dockerfile .
+                '''
             }
         }
     }

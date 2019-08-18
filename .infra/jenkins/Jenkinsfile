@@ -21,7 +21,6 @@ pipeline {
         stage('Static Code Analysis') {
             steps {
                 echo 'Using sonarQube to do static code analysis'
-                sh "chmod 777 ./gradlew"
                 sh "./gradlew sonarqube"
             }
         }

@@ -21,6 +21,8 @@ pipeline {
         stage('Static Code Analysis') {
             steps {
                 echo 'Using sonarQube to do static code analysis'
+                sh "chmod 777 ./gradlew"
+                sh "./gradlew sonarqube"
             }
         }
         stage('Deploying') {
@@ -31,7 +33,7 @@ pipeline {
                 '''
             }
         }
-        stage('Publishing to dockerhub') {
+        stage('Publishing to Dockerhub') {
             steps {
                 echo "Pushing the image to docker hub"
                 sh "docker login -u ebrank97 -p abc123!@#"

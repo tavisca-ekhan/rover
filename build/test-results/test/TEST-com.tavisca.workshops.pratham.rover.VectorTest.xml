@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tavisca.workshops.pratham.rover.VectorTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2019-08-16T07:32:14" hostname="RENTLAPT0079" time="0.087">
+  <properties/>
+  <testcase name="vectorCanMoveForwardTowardsEast()" classname="com.tavisca.workshops.pratham.rover.VectorTest" time="0.038"/>
+  <testcase name="vectorCanMoveForwardTowardsWest()" classname="com.tavisca.workshops.pratham.rover.VectorTest" time="0.002"/>
+  <testcase name="vectorCanRotateRightFromEast()" classname="com.tavisca.workshops.pratham.rover.VectorTest" time="0.001"/>
+  <testcase name="vectorCanRotateRightFromWest()" classname="com.tavisca.workshops.pratham.rover.VectorTest" time="0.001"/>
+  <testcase name="vectorInitializesWithStartPosition()" classname="com.tavisca.workshops.pratham.rover.VectorTest" time="0.001"/>
+  <testcase name="vectorCanRotateLeftFromEast()" classname="com.tavisca.workshops.pratham.rover.VectorTest" time="0.002"/>
+  <testcase name="vectorCanRotateLeftFromWest()" classname="com.tavisca.workshops.pratham.rover.VectorTest" time="0.001"/>
+  <testcase name="vectorCanRotateRightFromNorth()" classname="com.tavisca.workshops.pratham.rover.VectorTest" time="0.001"/>
+  <testcase name="vectorCanRotateRightFromSouth()" classname="com.tavisca.workshops.pratham.rover.VectorTest" time="0.001"/>
+  <testcase name="vectorCanMoveForwardTowardsNorth()" classname="com.tavisca.workshops.pratham.rover.VectorTest" time="0.002"/>
+  <testcase name="vectorCanMoveForwardTowardsSouth()" classname="com.tavisca.workshops.pratham.rover.VectorTest" time="0.001"/>
+  <testcase name="vectorCanRotateLeftFromNorth()" classname="com.tavisca.workshops.pratham.rover.VectorTest" time="0.002"/>
+  <testcase name="vectorCanRotateLeftFromSouth()" classname="com.tavisca.workshops.pratham.rover.VectorTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
